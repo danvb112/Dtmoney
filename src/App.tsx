@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Modal from 'react-modal';
 
 import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header/Header";
 import { GlobalStyle } from "./styles/global";
+import {NewTransactionModal} from './components/NewTransactionModal/NewTransactionModal';
 
 export function App() {
   const [isNewTransactionModalOpen, setIsNewTransactionModalOpen] = useState(false);
@@ -21,12 +21,11 @@ export function App() {
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <Dashboard />
 
-      <Modal
+      <NewTransactionModal 
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Create Transaction</h2>
-      </Modal>
+      />
+
       <GlobalStyle />
     </>
   );
