@@ -27,7 +27,7 @@ export function Summary() {
 
     return (
         <Container>
-            <div>
+            <div className="hightlight-background">
                 <header>
                     <p>Entradas</p>
                     <img src={incomeImg} />
@@ -39,7 +39,7 @@ export function Summary() {
                     }).format(summary.deposits)}
                 </strong>
             </div>
-            <div>
+            <div className="hightlight-background-red">
                 <header>
                     <p>Saídas</p>
                     <img src={outcomeImg} />
